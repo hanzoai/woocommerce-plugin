@@ -1,12 +1,12 @@
 <?php
 
 /*
-Plugin Name: WooCommerce Payment Gateway - CoinGate
-Plugin URI: https://coingate.com
-Description: Accept Bitcoin via CoinGate in your WooCommerce store
+Plugin Name: WooCommerce Payment Gateway - Hanzo
+Plugin URI: https://hanzo.io
+Description: Accept Bitcoin via Hanzo in your WooCommerce store
 Version: 1.1.0
-Author: CoinGate
-Author URI: https://coingate.com
+Author: Hanzo
+Author URI: https://hanzo.io
 License: MIT License
 License URI: https://github.com/coingate/woocommerce-plugin/blob/master/LICENSE
 Github Plugin URI: https://github.com/coingate/woocommerce-plugin
@@ -26,7 +26,7 @@ function coingate_init()
 
   require_once(__DIR__.'/lib/coingate/init.php');
 
-  class WC_Gateway_Coingate extends WC_Payment_Gateway
+  class WC_Gateway_Hanzo extends WC_Payment_Gateway
   {
     public function __construct()
     {
@@ -34,7 +34,7 @@ function coingate_init()
 
       $this->id = 'coingate';
       $this->has_fields = false;
-      $this->method_title = 'CoinGate';
+      $this->method_title = 'Hanzo';
       $this->icon = apply_filters('woocommerce_coingate_icon', PLUGIN_DIR.'assets/bitcoin.png');
 
       $this->init_form_fields();
@@ -58,9 +58,9 @@ function coingate_init()
     public function admin_options()
     {
       ?>
-      <h3><?php _e('CoinGate', 'woothemes'); ?></h3>
-      <p><?php _e('Accept Bitcoin through the CoinGate.com and receive payments in euros and US dollars.<br>
-        <a href="https://developer.coingate.com/docs/issues" target="_blank">Not working? Common issues</a> &middot; <a href="mailto:support@coingate.com">support@coingate.com</a>', 'woothemes'); ?></p>
+      <h3><?php _e('Hanzo', 'woothemes'); ?></h3>
+      <p><?php _e('Accept Bitcoin through the Hanzo.com and receive payments in euros and US dollars.<br>
+        <a href="https://developer.hanzo.io/docs/issues" target="_blank">Not working? Common issues</a> &middot; <a href="mailto:support@hanzo.io">support@hanzo.io</a>', 'woothemes'); ?></p>
       <table class="form-table">
         <?php $this->generate_settings_html(); ?>
       </table>
@@ -72,8 +72,8 @@ function coingate_init()
     {
       $this->form_fields = array(
         'enabled' => array(
-          'title' => __('Enable CoinGate', 'woocommerce'),
-          'label' => __('Enable Bitcoin payment via CoinGate', 'woocommerce'),
+          'title' => __('Enable Hanzo', 'woocommerce'),
+          'label' => __('Enable Bitcoin payment via Hanzo', 'woocommerce'),
           'type' => 'checkbox',
           'description' => '',
           'default' => 'no',
@@ -82,7 +82,7 @@ function coingate_init()
           'title' => __('Description', 'woocommerce'),
           'type' => 'textarea',
           'description' => __('This controls the description which the user sees during checkout.', 'woocommerce'),
-          'default' => __('Pay with Bitcoin via Coingate'),
+          'default' => __('Pay with Bitcoin via Hanzo'),
         ),
         'title' => array(
           'title' => __('Title', 'woocommerce'),
@@ -93,20 +93,20 @@ function coingate_init()
         'app_id' => array(
           'title' => __('App ID', 'woocommerce'),
           'type' => 'text',
-          'description' => __('CoinGate App ID', 'woocommerce'),
+          'description' => __('Hanzo App ID', 'woocommerce'),
           'default' => '',
         ),
         'api_key' => array(
           'title' => __('API Key', 'woocommerce'),
           'type' => 'text',
-          'description' => __('CoinGate API Key', 'woocommerce'),
+          'description' => __('Hanzo API Key', 'woocommerce'),
           'default' => __('', 'woocommerce'),
         ),
         'api_secret' => array(
           'title' => __('API Secret', 'woocommerce'),
           'type' => 'text',
           'default' => '',
-          'description' => __('CoinGate API Secret', 'woocommerce'),
+          'description' => __('Hanzo API Secret', 'woocommerce'),
         ),
         'receive_currency' => array(
           'title' => __('Receive Currency', 'woocommerce'),
@@ -116,7 +116,7 @@ function coingate_init()
             'EUR' => __('Euros (€)', 'woocommerce'),
             'USD' => __('US Dollars ($)', 'woocommerce')
           ),
-          'description' => __('Currency you want to receive when making withdrawal at CoinGate. Please take a note what if you choose EUR or USD you will be asked to verify your business before making a withdrawal at CoinGate.', 'woocomerce'),
+          'description' => __('Currency you want to receive when making withdrawal at Hanzo. Please take a note what if you choose EUR or USD you will be asked to verify your business before making a withdrawal at Hanzo.', 'woocomerce'),
           'default' => 'BTC',
         ),
         'order_statuses' => array(
@@ -127,8 +127,8 @@ function coingate_init()
           'type' => 'checkbox',
           'label' => __('Enable test mode', 'woocommerce'),
           'default' => 'no',
-          'description' => __('Enable "Test" to test on <a href="https://sandbox.coingate.com" target="_blank">sandbox.coingate.com</a>. <a href="http://support.coingate.com/knowledge_base/topics/how-can-i-test-your-service-without-signing-up" target="_blank">Read more about testing</a>.<br>
-            Please note, that for "Test" mode you <b>must</b> generate separate API credentials on <a href="https://sandbox.coingate.com" target="_blank">sandbox.coingate.com</a>. API credentials generated on <a href="https://coingate.com" target="_blank">coingate.com</a> will <b>not</b> work for "Test" mode.', 'woocommerce'),
+          'description' => __('Enable "Test" to test on <a href="https://sandbox.hanzo.io" target="_blank">sandbox.hanzo.io</a>. <a href="http://support.hanzo.io/knowledge_base/topics/how-can-i-test-your-service-without-signing-up" target="_blank">Read more about testing</a>.<br>
+            Please note, that for "Test" mode you <b>must</b> generate separate API credentials on <a href="https://sandbox.hanzo.io" target="_blank">sandbox.hanzo.io</a>. API credentials generated on <a href="https://hanzo.io" target="_blank">hanzo.io</a> will <b>not</b> work for "Test" mode.', 'woocommerce'),
         ),
       );
     }
@@ -162,7 +162,7 @@ function coingate_init()
 
       $wcOrder = wc_get_order($order_id);
 
-      $order = \CoinGate\Merchant\Order::create(array(
+      $order = \Hanzo\Merchant\Order::create(array(
         'order_id' => $order->id,
         'price' => number_format($order->get_total(), 2, '.', ''),
         'currency' => get_woocommerce_currency(),
@@ -207,10 +207,10 @@ function coingate_init()
         }
 
         $this->init_coingate();
-        $cgOrder = \CoinGate\Merchant\Order::find($request['id']);
+        $cgOrder = \Hanzo\Merchant\Order::find($request['id']);
 
         if (!$cgOrder) {
-          throw new Exception('CoinGate Order #' . $order->id . ' does not exists');
+          throw new Exception('Hanzo Order #' . $order->id . ' does not exists');
         }
 
         $orderStatuses = $this->get_option('order_statuses');
@@ -347,13 +347,13 @@ function coingate_init()
 
     private function init_coingate()
     {
-      \CoinGate\CoinGate::config(
+      \Hanzo\Hanzo::config(
         array(
           'app_id'      => $this->app_id,
           'api_key'     => $this->api_key,
           'api_secret'  => $this->api_secret,
           'environment' => ($this->test ? 'sandbox' : 'live'),
-          'user_agent'  => ('CoinGate - WooCommerce v' . WOOCOMMERCE_VERSION . ' Plugin v' . COINGATE_WOOCOMMERCE_VERSION),
+          'user_agent'  => ('Hanzo - WooCommerce v' . WOOCOMMERCE_VERSION . ' Plugin v' . COINGATE_WOOCOMMERCE_VERSION),
         )
       );
     }
@@ -361,7 +361,7 @@ function coingate_init()
 
   function add_coingate_gateway($methods)
   {
-    $methods[] = 'WC_Gateway_Coingate';
+    $methods[] = 'WC_Gateway_Hanzo';
 
     return $methods;
   }

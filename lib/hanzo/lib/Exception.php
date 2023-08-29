@@ -1,5 +1,5 @@
 <?php
-namespace CoinGate;
+namespace Hanzo;
 
 class Exception
 {

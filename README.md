@@ -1,15 +1,15 @@
-# WooCommerce CoinGate Plugin
+# WooCommerce Hanzo Plugin
 
-Accept Bitcoin & Altcoins on your WooCommerce store.
+Accept Credit Cardsa, Bitcoin & Altcoins on your WooCommerce store.
 
-Read the plugin installation instructions below to get started with CoinGate Bitcoin & Altcoin payment gateway on your shop.
-Full setup guide with screenshots is also available on our blog: <https://blog.coingate.com/2017/05/install-woocommerce-bitcoin-plugin/>
+Read the plugin installation instructions below to get started with Hanzo Bitcoin & Altcoin payment gateway on your shop.
+Full setup guide with screenshots is also available on our blog: <https://blog.hanzo.io/2017/05/install-woocommerce-bitcoin-plugin/>
 
 ## Install
 
-Sign up for CoinGate account at <https://coingate.com> for production and <https://sandbox.coingate.com> for testing (sandbox) environment.
+Sign up for Hanzo account at <https://hanzo.io> for production and <https://sandbox.hanzo.io> for testing (sandbox) environment.
 
-Please note, that for "Test" mode you **must** generate separate API credentials on <https://sandbox.coingate.com>. API credentials generated on <https://coingate.com> will **not** work for "Test" mode.
+Please note, that for "Test" mode you **must** generate separate API credentials on <https://sandbox.hanzo.io>. API credentials generated on <https://hanzo.io> will **not** work for "Test" mode.
 
 ### via [WordPress Plugin Manager](https://codex.wordpress.org/Plugins_Add_New_Screen)
 
@@ -21,9 +21,9 @@ Please note, that for "Test" mode you **must** generate separate API credentials
 
 4. Activate the plugin through the **Plugins** menu in WordPress.
 
-5. Enter [API Credentials](http://support.coingate.com/knowledge_base/topics/how-can-i-create-coingate-api-credentials) (*App ID*, *Api Key*, *Api Secret*) data to WooCommerce-Coingate Plugin Settings: *Admin » WooCommerce* click on **Checkout** tab find **Bitcoin** in Payment Gateways table and click **Settings**.
+5. Enter [API Credentials](http://support.hanzo.io/knowledge_base/topics/how-can-i-create-coingate-api-credentials) (*App ID*, *Api Key*, *Api Secret*) data to WooCommerce-Hanzo Plugin Settings: *Admin » WooCommerce* click on **Checkout** tab find **Bitcoin** in Payment Gateways table and click **Settings**.
 
-6. Don't forget check **Enable Bitcoin payment via CoinGate** checkbox in WooCommerce-Coingate Plugin settings.
+6. Don't forget check **Enable Bitcoin payment via Hanzo** checkbox in WooCommerce-Hanzo Plugin settings.
 
 ### via WooCommerce FTP Uploader
 
@@ -35,9 +35,9 @@ Please note, that for "Test" mode you **must** generate separate API credentials
 
 4. Activate the plugin through the **Plugins** menu in WordPress.
 
-5. Enter [API Credentials](http://support.coingate.com/knowledge_base/topics/how-can-i-create-coingate-api-credentials) (*App ID*, *Api Key*, *Api Secret*) data to WooCommerce-Coingate Plugin Settings: *Admin » WooCommerce* click on **Checkout** tab find **Bitcoin** in Payment Gateways table and click **Settings**.
+5. Enter [API Credentials](http://support.hanzo.io/knowledge_base/topics/how-can-i-create-coingate-api-credentials) (*App ID*, *Api Key*, *Api Secret*) data to WooCommerce-Hanzo Plugin Settings: *Admin » WooCommerce* click on **Checkout** tab find **Bitcoin** in Payment Gateways table and click **Settings**.
 
-6. Don't forget check **Enable Bitcoin payment via CoinGate** checkbox in WooCommerce-Coingate Plugin settings.
+6. Don't forget check **Enable Bitcoin payment via Hanzo** checkbox in WooCommerce-Hanzo Plugin settings.
 
 ### via FTP
 
@@ -47,6 +47,6 @@ Please note, that for "Test" mode you **must** generate separate API credentials
 
 3. Activate the plugin through the **Plugins** menu in WordPress.
 
-4. Enter [API Credentials](http://support.coingate.com/knowledge_base/topics/how-can-i-create-coingate-api-credentials) (*App ID*, *Api Key*, *Api Secret*) data to WooCommerce-Coingate Plugin Settings: *Admin » WooCommerce* click on **Checkout** tab find **Bitcoin** in Payment Gateways table and click **Settings**.
+4. Enter [API Credentials](http://support.hanzo.io/knowledge_base/topics/how-can-i-create-coingate-api-credentials) (*App ID*, *Api Key*, *Api Secret*) data to WooCommerce-Hanzo Plugin Settings: *Admin » WooCommerce* click on **Checkout** tab find **Bitcoin** in Payment Gateways table and click **Settings**.
 
-5. Don't forget check **Enable Bitcoin payment via CoinGate** checkbox in WooCommerce-Coingate Plugin settings.
+5. Don't forget check **Enable Bitcoin payment via Hanzo** checkbox in WooCommerce-Hanzo Plugin settings.

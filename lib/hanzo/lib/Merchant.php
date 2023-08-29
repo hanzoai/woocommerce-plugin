@@ -1,4 +1,4 @@
 <?php
-namespace CoinGate;
+namespace Hanzo;
 
 class Merchant {}

@@ -1,7 +1,7 @@
 <?php
 
-// CoinGate Class
-require(dirname(__FILE__) . '/lib/CoinGate.php');
+// Hanzo Class
+require(dirname(__FILE__) . '/lib/Hanzo.php');
 
 // Exception Class
 require(dirname(__FILE__) . '/lib/ApiError.php');

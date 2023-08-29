@@ -1,10 +1,10 @@
 <?php
-namespace CoinGate;
+namespace Hanzo;
 
-class CoinGate
+class Hanzo
 {
     const VERSION           = '2.0.1';
-    const USER_AGENT_ORIGIN = 'CoinGate PHP Library';
+    const USER_AGENT_ORIGIN = 'Hanzo PHP Library';
 
     public static $app_id      = '';
     public static $api_key     = '';
@@ -51,17 +51,17 @@ class CoinGate
 
         # Check if credentials was passed
         if (empty($app_id) || empty($app_key) || empty($app_secret))
-            \CoinGate\Exception::throwException(400, array('reason' => 'CredentialsMissing'));
+            \Hanzo\Exception::throwException(400, array('reason' => 'CredentialsMissing'));
 
         # Check if right environment passed
         $environments = array('live', 'sandbox');
 
         if (!in_array($environment, $environments)) {
             $availableEnvironments = join(', ', $environments);
-            \CoinGate\Exception::throwException(400, array('reason' => 'BadEnvironment', 'message' => "Environment does not exist. Available environments: $availableEnvironments"));
+            \Hanzo\Exception::throwException(400, array('reason' => 'BadEnvironment', 'message' => "Environment does not exist. Available environments: $availableEnvironments"));
         }
 
-        $url       = ($environment === 'sandbox' ? 'https://api-sandbox.coingate.com/v1' : 'https://api.coingate.com/v1') . $url;
+        $url       = ($environment === 'sandbox' ? 'https://api-sandbox.hanzo.io/v1' : 'https://api.hanzo.io/v1') . $url;
         $nonce     = (int)(microtime(true) * 1e6);
         $message   = $nonce . $app_id . $app_key;
         $signature = hash_hmac('sha256', $message, $app_secret);
@@ -93,6 +93,6 @@ class CoinGate
         if ($http_status === 200)
             return $response;
         else
-            \CoinGate\Exception::throwException($http_status, $response);
+            \Hanzo\Exception::throwException($http_status, $response);
     }
 }
