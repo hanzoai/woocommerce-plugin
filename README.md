@@ -1,6 +1,6 @@
 # WooCommerce Hanzo Plugin
 
-Accept Credit Cardsa, Bitcoin & Altcoins on your WooCommerce store.
+Accept Credit Cards, Bitcoin & Altcoins on your WooCommerce store.
 
 Read the plugin installation instructions below to get started with Hanzo Bitcoin & Altcoin payment gateway on your shop.
 Full setup guide with screenshots is also available on our blog: <https://blog.hanzo.io/2017/05/install-woocommerce-bitcoin-plugin/>
